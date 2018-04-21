@@ -375,12 +375,12 @@ Prefab:
     - target: {fileID: 114072299668055526, guid: 2fab39ddb3ba64a0eb3d8b4ed3f3b35d,
         type: 2}
       propertyPath: platformMask.m_Bits
-      value: 256
+      value: 1280
       objectReference: {fileID: 0}
     - target: {fileID: 114072299668055526, guid: 2fab39ddb3ba64a0eb3d8b4ed3f3b35d,
         type: 2}
       propertyPath: oneWayPlatformMask.m_Bits
-      value: 0
+      value: 256
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2fab39ddb3ba64a0eb3d8b4ed3f3b35d, type: 2}
@@ -401,7 +401,7 @@ GameObject:
   - component: {fileID: 431754488}
   - component: {fileID: 431754487}
   - component: {fileID: 431754490}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
