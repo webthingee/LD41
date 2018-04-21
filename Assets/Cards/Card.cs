@@ -5,10 +5,10 @@ using UnityEngine.UI;
 
 public class Card : MonoBehaviour 
 {
-    public string title;
-    public string description;
-    public int numUses;
+    public CardData cardData;
+    public int usesRemaining;
 
+    public RawImage graphic;
     public Text titleUI;
     public Text descriptionUI;
     public Text numUsesUI;
@@ -17,34 +17,42 @@ public class Card : MonoBehaviour
     {
         get
         {
-            return numUses;
+            return usesRemaining;
         }
 
         set
         {
-            numUses = value;
-            if (numUses <= 0)
+            usesRemaining = value;
+            if (usesRemaining <= 0)
             {
                 Destroy(this.gameObject);
             }
         }
     }
 
+    void Awake ()
+    {
+        usesRemaining = cardData.numUses;
+        graphic.texture = cardData.graphic;
+        graphic.color = cardData.tintColor;
+    }
+
     void Start () 
     {
-		titleUI.text = title;
-		descriptionUI.text = description;
-		numUsesUI.text = numUses.ToString();
+		titleUI.text = cardData.title;
+		descriptionUI.text = cardData.description;
+		numUsesUI.text = cardData.numUses.ToString();
 
 	}
 	
 	void Update () 
     {
-		numUsesUI.text = numUses.ToString();
+		numUsesUI.text = usesRemaining.ToString();
 	}
 
-    public void CardUsed ()
+    public void ExecuteCardAction ()
     {
         NumUses --;
+        cardData.cardEffect.Raise();
     }
 }

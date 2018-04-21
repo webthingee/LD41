@@ -71,10 +71,10 @@ public class CharacterMovement : MonoBehaviour
         // isLeft = flags.left;
 
         /// Check if we hit our head
-        if (flags.above)
-        {
-            moveDirection.y -= gravity * Time.deltaTime;
-            moveDirection.x = 0;
-        }
+        // if (flags.above)
+        // {
+        //     moveDirection.y -= gravity * Time.deltaTime;
+        //     moveDirection.x = 0;
+        // }
     }
 }
