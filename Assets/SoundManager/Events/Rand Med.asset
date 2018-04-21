@@ -9,18 +9,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ace7397e0ac4d41c8afae089aa6f26fd, type: 3}
-  m_Name: Short Sounds Random
+  m_Name: Rand Med
   m_EditorClassIdentifier: 
   clips:
-  - {fileID: 8300000, guid: 451d9f4a79cb041ebb5be35d02cb7241, type: 3}
-  - {fileID: 8300000, guid: c41e44f84c71b4bd580e66ae05a476be, type: 3}
+  - {fileID: 8300000, guid: fe1651330713147d7aab93bf2aebe237, type: 3}
+  - {fileID: 8300000, guid: f34008eb914ea4a19b72e4f5c26b87ab, type: 3}
   volumeAdjust:
     UseConstant: 0
     ConstantValue: 0
     Variable: {fileID: 11400000, guid: c5c68b914227042e68bae4b0ed4cc3e4, type: 2}
   volume:
-    minValue: 0.60294116
-    maxValue: 0.8235294
+    minValue: 0.6617647
+    maxValue: 0.9117647
   pitch:
-    minValue: 0.6764706
-    maxValue: 1.4705883
+    minValue: 0.88235295
+    maxValue: 1.382353
