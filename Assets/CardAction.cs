@@ -10,6 +10,10 @@ public class CardAction : MonoBehaviour
     private void OnMouseDown ()
     {
         cardEffect.Raise();
-        //Debug.Log("Card Effect");
+    }
+
+    public void ExecuteCardAction ()
+    {
+        cardEffect.Raise();
     }
 }
