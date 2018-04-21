@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 114231243071102444}
   - component: {fileID: 114072299668055526}
   - component: {fileID: 114134900666755412}
+  - component: {fileID: 114537149540249314}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -96,7 +97,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1481788783146118}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.1, y: -1, z: 0}
+  m_LocalPosition: {x: -4.1, y: -2.36, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4414268837457552}
@@ -146,7 +147,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.5, y: 1}
   m_EdgeRadius: 0
 --- !u!114 &114072299668055526
 MonoBehaviour:
@@ -169,7 +170,7 @@ MonoBehaviour:
     m_Bits: 4294967295
   oneWayPlatformMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   slopeLimit: 30
   jumpingThreshold: 0.07
   slopeSpeedMultiplier:
@@ -209,9 +210,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd5736051fbaf41bd97ac6bc52021273, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 12
-  jumpSpeed: 24
-  doubleJumpSpeed: 24
+  moveSpeed: 3
+  climbSpeed: 2
+  jumpSpeed: 8
+  doubleJumpSpeed: 0
   gravity: 36
   isClimbing: 0
   climbAxis: 0
@@ -224,6 +226,7 @@ MonoBehaviour:
   isRight: 0
   isLeft: 0
   doJump: 0
+  latterDetection: 0.5
 --- !u!114 &114231243071102444
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -236,6 +239,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerContainer: {fileID: 1864874784341630}
+--- !u!114 &114537149540249314
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1481788783146118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e839e4c12473014b9b3d3faccc0f61d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: ba79b123f31a84397a91d58f862ea358, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114134900666755412}
+        m_MethodName: Jump
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!212 &212296824771491972
 SpriteRenderer:
   m_ObjectHideFlags: 1

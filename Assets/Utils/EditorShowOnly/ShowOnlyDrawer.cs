@@ -3,7 +3,6 @@
 #if UNITY_EDITOR
 using UnityEditor;
 
-
 [CustomPropertyDrawer(typeof(ShowOnlyAttribute))]
 public class ShowOnlyDrawer : PropertyDrawer
 {

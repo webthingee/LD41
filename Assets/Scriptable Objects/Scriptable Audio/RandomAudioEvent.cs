@@ -7,13 +7,11 @@ public class RandomAudioEvent : AudioEvent
 {
 	public AudioClip[] clips;
     public FloatReference volumeAdjust;
-
 	public RangedFloat volume;
     #if UNITY_EDITOR
-	[MinMaxRange(0, 2)]
-        #endif
-	public RangedFloat pitch;
-
+	    [MinMaxRange(0, 2)] 
+    #endif
+	    public RangedFloat pitch;
 
 	public override void Play(AudioSource source)
 	{
@@ -24,5 +22,4 @@ public class RandomAudioEvent : AudioEvent
 		source.pitch = Random.Range(pitch.minValue, pitch.maxValue);
 		source.Play();
 	}
-
 }

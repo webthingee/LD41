@@ -5,12 +5,13 @@ using UnityEngine;
 public class PlayerMovement : CharacterMovement 
 {
     public bool doJump;
+    public float latterDetection;
 
     protected override void Update () 
     {
         climbAxis = Input.GetAxisRaw("Vertical");
         moveDirection.x = Input.GetAxisRaw("Horizontal");
-        moveDirection.x *= speed;
+        moveDirection.x *= moveSpeed;
         MoveCharacter();
         base.Update();
 	}
@@ -69,12 +70,14 @@ public class PlayerMovement : CharacterMovement
             // }
         }
 
+        Debug.Log(LatterDetection());
+
         if (LatterDetection())
         {
             if  (climbAxis != 0)
             {
                 isClimbing = true;
-                moveDirection.y = climbAxis * speed;
+                moveDirection.y = climbAxis * climbSpeed;
             }
             else
             {
@@ -125,9 +128,9 @@ public class PlayerMovement : CharacterMovement
 
     bool LatterDetection ()
     {
-        var rayStart = transform.position + Vector3.down;
-        var rayDir = Vector2.up;
-        float rayDist = 2f;
+        var rayStart = transform.position;
+        var rayDir = Vector2.down;
+        float rayDist = latterDetection;
 
         Debug.DrawRay(rayStart, rayDir * rayDist, Color.green);
 

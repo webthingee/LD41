@@ -8,7 +8,8 @@ using UnityEngine;
 public class CharacterMovement : MonoBehaviour
 {
     [Header("Character Movement")]
-    public float speed = 12.0f;
+    public float moveSpeed = 12.0f;
+    public float climbSpeed = 12.0f;
     public float jumpSpeed = 24.0f;
     public float doubleJumpSpeed = 24.0f;
 
