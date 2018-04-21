@@ -8,6 +8,7 @@ public class Card : MonoBehaviour
     public CardData cardData;
     public int usesRemaining;
 
+    [Header("UI")]
     public RawImage graphic;
     public Text titleUI;
     public Text descriptionUI;
@@ -32,7 +33,7 @@ public class Card : MonoBehaviour
 
     void Awake ()
     {
-        usesRemaining = cardData.numUses;
+        usesRemaining = Random.Range(1, cardData.numUses + 1);
         graphic.texture = cardData.graphic;
         graphic.color = cardData.tintColor;
     }
@@ -42,7 +43,6 @@ public class Card : MonoBehaviour
 		titleUI.text = cardData.title;
 		descriptionUI.text = cardData.description;
 		numUsesUI.text = cardData.numUses.ToString();
-
 	}
 	
 	void Update () 
