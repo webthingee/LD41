@@ -70,8 +70,6 @@ public class PlayerMovement : CharacterMovement
             // }
         }
 
-        Debug.Log(LatterDetection());
-
         if (LatterDetection())
         {
             if  (climbAxis != 0)
