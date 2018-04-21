@@ -13,6 +13,5 @@ public class GameManager : MonoBehaviour
             if (!SceneManager.GetSceneByName(menuScene).IsValid())
                 SceneManager.LoadScene(menuScene, LoadSceneMode.Additive);
         }
-
 	}
 }

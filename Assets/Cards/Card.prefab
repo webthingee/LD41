@@ -53,7 +53,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 224729045304371570}
-  - component: {fileID: 114048169291467062}
   - component: {fileID: 114508336279122252}
   m_Layer: 5
   m_Name: Card
@@ -130,7 +129,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &114047445804641412
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -164,17 +163,6 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Weapon
---- !u!114 &114048169291467062
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1342414666295994}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 954d18f72357f400db1a845380757ee5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114106067225521076
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -510,7 +498,7 @@ RectTransform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1342414666295994}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: -0.38268343, w: 0.92387956}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -522,7 +510,7 @@ RectTransform:
   - {fileID: 224334095489289902}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -45}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 841.5, y: -256.5}
