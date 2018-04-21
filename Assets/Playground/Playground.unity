@@ -212,6 +212,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardArea: {fileID: 1844252479}
   card: {fileID: 1342414666295994, guid: 8eca4b21cb6f64af38a9f4d9d08e3990, type: 2}
+  cardData:
+  - {fileID: 11400000, guid: 41297838f95a6462bbab43f77d43d2df, type: 2}
+  - {fileID: 11400000, guid: 323fa48cebd104c8f9a67142f0c4409b, type: 2}
 --- !u!1001 &396285318
 Prefab:
   m_ObjectHideFlags: 0
