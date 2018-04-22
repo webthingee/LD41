@@ -9,16 +9,19 @@ public class FiringCtrl : MonoBehaviour
     public GameObject projectile;
     public float projectileSpeed;
     public float rateOfFire = 1.0f;
-    public int damage = 1;
     public bool doubleDamage;
-    public CardData cardData;
+    public int damage = 1;
+
+    public void DoubleDamage ()
+    {
+        doubleDamage = true;
+    }
 
     public void PullTrigger ()
     {
         if (canFire)
         {
             StartCoroutine(FireBullets(transform.up, damage, rateOfFire));
-            doubleDamage = false;
         }
     }
 
@@ -33,17 +36,28 @@ public class FiringCtrl : MonoBehaviour
             bullet.transform.up = _direction;
             bullet.GetComponent<Projectile>().FiringPoint = transform.position;
             bullet.GetComponent<Projectile>().projectileSpeed = projectileSpeed;
-            int newDamage = doubleDamage ? 2 : 1;
-            bullet.GetComponent<Projectile>().damage = _damage * newDamage; // calc before it gets here
+            bullet.GetComponent<Projectile>().damage = CalculateDamage(); // calc before it gets here
             //bullet.GetComponent<Projectile>().projectileRange = weapon.Range;            
 
 		yield return new WaitForSeconds(_waitTime);
+        
+        doubleDamage = false;
 		
 		canFire = true;
 	}
 
-    public void DoubleDamage ()
+    int CalculateDamage ()
     {
-        doubleDamage = true;
+        // if (cardData.damageBonus > 0)
+        // {
+        //     damageToDo += cardData.damageBonus;
+        // }
+
+        if (doubleDamage)
+        {
+            damage *= 2;
+        }
+
+        return damage;
     }
 }

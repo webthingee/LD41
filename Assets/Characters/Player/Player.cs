@@ -21,6 +21,14 @@ public class Player : MonoBehaviour
         }
 	}
 
+    public void CardDataProcess ()
+    {
+        if (cardData.weapon != null)
+        {
+            PickUpWeapon();
+        }
+    }
+
     void PickUpWeapon ()
     {
         if (weaponAnchor.GetComponentInChildren<FiringCtrl>() != null)

@@ -8,12 +8,16 @@ public class CardData : ScriptableObject
 	public string title;
     public string description;
     public int numUses;
-    public int damageBonus;
-    public Texture graphic;
-    public Color tintColor;
-    public GameEvent cardEffect;
     public string targetObject;
+
+    public Texture graphic;
+    public Color tintColor = Color.white;
+    
+    public GameEvent cardEffect;
+
     public GameObject weapon;
+    public bool doubleDamage;
+    public int damageBonus;
 
     public AudioClip clips;
 }

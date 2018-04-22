@@ -14,7 +14,11 @@ MonoBehaviour:
   title: Super Jump
   description: Up Up and Up
   numUses: 3
+  targetObject: Player
   graphic: {fileID: 2800000, guid: d8d72322a346c424cb918310ae9d66db, type: 3}
   tintColor: {r: 0.18187718, g: 0.85294116, b: 0.43641886, a: 1}
   cardEffect: {fileID: 11400000, guid: ba79b123f31a84397a91d58f862ea358, type: 2}
+  weapon: {fileID: 0}
+  doubleDamage: 0
+  damageBonus: 0
   clips: {fileID: 0}

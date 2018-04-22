@@ -92,6 +92,7 @@ public class Character : MonoBehaviour, IDamageable
         // GameObject deathParticle = Instantiate(deathEffect, transform.position, Quaternion.identity, null);
         damageSound.Play(SoundManager.Instance.GetOpenAudioSource()); 
         deathSound.Play(SoundManager.Instance.GetOpenAudioSource()); 
+        FindObjectOfType<CardDeal>().DealACard();
 
         // if (_tag == "Player")
         // {

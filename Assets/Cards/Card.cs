@@ -92,10 +92,10 @@ public class Card : MonoBehaviour, IPointerClickHandler, IPointerExitHandler, IP
 
     private void TargetObject()
     {
-        if (cardData.targetObject == "Gun")
-        {
-            GameObject.Find("Player").GetComponentInChildren<FiringCtrl>().cardData = cardData;
-        }
+        // if (cardData.targetObject == "Gun")
+        // {
+        //     GameObject.Find("Player").GetComponentInChildren<FiringCtrl>().cardData = cardData;
+        // }
         if (cardData.targetObject == "Player")
         {
             GameObject.Find("Player").GetComponent<Player>().cardData = cardData;

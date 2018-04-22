@@ -11,13 +11,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88b5db37f963440cdba5d82a0b1cb7cc, type: 3}
   m_Name: Shotgun
   m_EditorClassIdentifier: 
-  title: 
-  description: 
-  numUses: 0
-  damageBonus: 0
-  graphic: {fileID: 0}
-  tintColor: {r: 0, g: 0, b: 0, a: 0}
-  cardEffect: {fileID: 0}
-  targetObject: 
-  weapon: {fileID: 0}
+  title: ShotGun
+  description: ShotGun
+  numUses: 1
+  targetObject: Player
+  graphic: {fileID: 2800000, guid: 9ee00b51859874a02bd5ffac91caea80, type: 3}
+  tintColor: {r: 0.5182201, g: 0.7178066, b: 0.99264705, a: 1}
+  cardEffect: {fileID: 11400000, guid: b7598e4ae0b1e4b079bf2a2de3de3dec, type: 2}
+  weapon: {fileID: 1165709725222192, guid: 7f00bd2ef7ec44852a32156fbb4e5c38, type: 2}
+  doubleDamage: 0
+  damageBonus: 5
   clips: {fileID: 0}
