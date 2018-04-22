@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Enemy : Character 
 {	
-	public int damage;
+	[Header("Enemy Settings")]
+    public int damage;
 
     protected override void Start () 
     {

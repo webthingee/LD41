@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using System;
 
 public class Card : MonoBehaviour, IPointerClickHandler, IPointerExitHandler, IPointerEnterHandler
 {
@@ -41,7 +42,7 @@ public class Card : MonoBehaviour, IPointerClickHandler, IPointerExitHandler, IP
 
     void Start () 
     {
-		usesRemaining = Random.Range(1, cardData.numUses + 1);
+		usesRemaining = UnityEngine.Random.Range(1, cardData.numUses + 1);
         graphic.texture = cardData.graphic;
         graphic.color = cardData.tintColor;
         titleUI.text = cardData.title;
@@ -74,18 +75,30 @@ public class Card : MonoBehaviour, IPointerClickHandler, IPointerExitHandler, IP
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        Debug.Log("Mouse Enter");
+        //Debug.Log("Mouse Enter");
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        Debug.Log("Mouse Exit");
+        //Debug.Log("Mouse Exit");
     }
 
     public void ExecuteCardAction ()
     {
         NumUses --;
+        TargetObject();
         cardData.cardEffect.Raise();
     }
 
+    private void TargetObject()
+    {
+        if (cardData.targetObject == "Gun")
+        {
+            GameObject.Find("Player").GetComponentInChildren<FiringCtrl>().cardData = cardData;
+        }
+        if (cardData.targetObject == "Player")
+        {
+            GameObject.Find("Player").GetComponent<Player>().cardData = cardData;
+        }
+    }
 }

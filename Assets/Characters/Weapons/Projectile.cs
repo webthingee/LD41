@@ -7,6 +7,7 @@ public class Projectile : MonoBehaviour
     [ShowOnly] public float projectileSpeed;
     public float projectileRange;
 	public GameObject impactEffect;
+    public int damage;
 
     Vector2 firingPoint;
 
@@ -42,8 +43,8 @@ public class Projectile : MonoBehaviour
 		{
 			if (damageableComponent)
 			{
-				(damageableComponent as IDamageable).TakeDamage(2);
-				
+				(damageableComponent as IDamageable).TakeDamage(damage);
+				Destroy(this.gameObject);
 			}
 		}
 	}
