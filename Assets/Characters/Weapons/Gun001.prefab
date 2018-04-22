@@ -140,10 +140,11 @@ MonoBehaviour:
   canFire: 1
   projectile: {fileID: 1304158419423454, guid: 9f810f646e1c54c0e86b4f0fa6f1f441, type: 2}
   gunPoint: {fileID: 4214737400026062}
-  projectileSpeed: 5
+  projectileSpeed: 22
   rateOfFire: 1
   doubleDamage: 0
   damage: 1
+  fireSound: {fileID: 11400000, guid: e5ece04de0f6546a796a79d750a08bbd, type: 2}
 --- !u!114 &114829791370469354
 MonoBehaviour:
   m_ObjectHideFlags: 1

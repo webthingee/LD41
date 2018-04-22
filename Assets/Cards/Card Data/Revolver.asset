@@ -13,11 +13,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: Revolver
   description: Revolver
-  numUses: 1
+  numUses: 5
   targetObject: Player
-  graphic: {fileID: 2800000, guid: 9ee00b51859874a02bd5ffac91caea80, type: 3}
-  tintColor: {r: 0.28114188, g: 0.3175337, b: 0.36764705, a: 1}
-  cardEffect: {fileID: 11400000, guid: b7598e4ae0b1e4b079bf2a2de3de3dec, type: 2}
+  graphic: {fileID: 2800000, guid: ae22ef401a11c4996a464acf133e3b71, type: 3}
+  tintColor: {r: 1, g: 1, b: 1, a: 1}
+  cardEffect:
+  - {fileID: 11400000, guid: 3a8ba27a70a434860b1710ad592c26ee, type: 2}
+  - {fileID: 11400000, guid: b7598e4ae0b1e4b079bf2a2de3de3dec, type: 2}
   weapon: {fileID: 1165709725222192, guid: b619bd0b9d337448698a89e915070ee9, type: 2}
   doubleDamage: 0
   damageBonus: 0

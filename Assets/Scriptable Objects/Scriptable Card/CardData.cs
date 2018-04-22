@@ -13,7 +13,7 @@ public class CardData : ScriptableObject
     public Texture graphic;
     public Color tintColor = Color.white;
     
-    public GameEvent cardEffect;
+    public GameEvent[] cardEffect;
 
     public GameObject weapon;
     public bool doubleDamage;

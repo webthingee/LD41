@@ -15,9 +15,10 @@ MonoBehaviour:
   description: A little more
   numUses: 2
   targetObject: Gun
-  graphic: {fileID: 2800000, guid: 9d917015c666b424bba20fb9c3f87a2b, type: 3}
-  tintColor: {r: 0.8897059, g: 0.8685912, b: 0.12429716, a: 1}
-  cardEffect: {fileID: 11400000, guid: 62eea0817a0ad4febb591c04b6d39775, type: 2}
+  graphic: {fileID: 2800000, guid: fa8b21225553641b5ad9e28f5551e396, type: 3}
+  tintColor: {r: 1, g: 1, b: 1, a: 1}
+  cardEffect:
+  - {fileID: 11400000, guid: ba79b123f31a84397a91d58f862ea358, type: 2}
   weapon: {fileID: 0}
   doubleDamage: 1
   damageBonus: 0

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using RoboRyanTron.Unite2017.Events;
 
 public class FiringCtrl : MonoBehaviour 
 {
@@ -12,7 +13,8 @@ public class FiringCtrl : MonoBehaviour
     public float rateOfFire = 1.0f;
     public bool doubleDamage;
     public int damage = 1;
-
+    public AudioEvent fireSound;
+    
     public void DoubleDamage ()
     {
         doubleDamage = true;
@@ -40,10 +42,11 @@ public class FiringCtrl : MonoBehaviour
             bullet.GetComponent<Projectile>().damage = CalculateDamage(); // calc before it gets here
             //bullet.GetComponent<Projectile>().projectileRange = weapon.Range;            
 
-		yield return new WaitForSeconds(_waitTime);
+        fireSound.Play(SoundManager.Instance.GetOpenAudioSource()); 
+        
+        yield return new WaitForSeconds(_waitTime);
         
         doubleDamage = false;
-		
 		canFire = true;
 	}
 

@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using System;
+using RoboRyanTron.Unite2017.Events;
 
 public class Card : MonoBehaviour, IPointerClickHandler, IPointerExitHandler, IPointerEnterHandler
 {
@@ -87,7 +88,11 @@ public class Card : MonoBehaviour, IPointerClickHandler, IPointerExitHandler, IP
     {
         NumUses --;
         TargetObject();
-        cardData.cardEffect.Raise();
+
+        foreach (GameEvent card in cardData.cardEffect)
+        {
+            card.Raise();
+        }
     }
 
     private void TargetObject()

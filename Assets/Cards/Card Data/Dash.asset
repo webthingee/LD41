@@ -9,18 +9,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 88b5db37f963440cdba5d82a0b1cb7cc, type: 3}
-  m_Name: Shotgun
+  m_Name: Dash
   m_EditorClassIdentifier: 
-  title: 
-  description: 
-  numUses: 5
-  targetObject: Player
-  graphic: {fileID: 2800000, guid: 712a3a29f59f442f9875af35eba9a761, type: 3}
+  title: Dash
+  description: Dash
+  numUses: 0
+  targetObject: 
+  graphic: {fileID: 2800000, guid: 94a2c5b73b0814ffb9b9945e6bd475e4, type: 3}
   tintColor: {r: 1, g: 1, b: 1, a: 1}
-  cardEffect:
-  - {fileID: 11400000, guid: b7598e4ae0b1e4b079bf2a2de3de3dec, type: 2}
-  - {fileID: 11400000, guid: 3a8ba27a70a434860b1710ad592c26ee, type: 2}
-  weapon: {fileID: 1165709725222192, guid: 7f00bd2ef7ec44852a32156fbb4e5c38, type: 2}
+  cardEffect: []
+  weapon: {fileID: 0}
   doubleDamage: 0
   damageBonus: 0
   clips: {fileID: 0}
