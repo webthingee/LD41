@@ -7,6 +7,7 @@ using RoboRyanTron.Unite2017.Events;
 public class FiringCtrl : MonoBehaviour 
 {
     public bool canFire = true;
+    public float enemySight;
     public GameObject projectile;
     public Transform gunPoint;
     public float projectileSpeed;
@@ -15,11 +16,28 @@ public class FiringCtrl : MonoBehaviour
     public GameObject doubleDamageInd;
     public int damage = 1;
     public AudioEvent fireSound;
+
+    public bool isEnemy;
     
     private void Awake()
     {
-        doubleDamageInd = GetComponentInParent<Toss>().dbl;
-        doubleDamageInd.SetActive(false); 
+        if (!isEnemy)
+        {
+            doubleDamageInd = GetComponentInParent<Toss>().dbl;
+            doubleDamageInd.SetActive(false);
+        }
+    }
+
+    private void Update()
+    {
+        if (isEnemy)
+            EnemyTargeting();
+    }
+
+    IEnumerator FireAtRandom ()
+    {
+        PullTrigger();        
+        yield return new WaitForSeconds(1f);
     }
 
     public void DoubleDamage ()
@@ -50,12 +68,14 @@ public class FiringCtrl : MonoBehaviour
             bullet.GetComponent<Projectile>().damage = CalculateDamage(); // calc before it gets here
             //bullet.GetComponent<Projectile>().projectileRange = weapon.Range;            
 
-        fireSound.Play(SoundManager.Instance.GetOpenAudioSource()); 
+        if (fireSound)
+            fireSound.Play(SoundManager.Instance.GetOpenAudioSource()); 
         
         yield return new WaitForSeconds(_waitTime);
         
         doubleDamage = false;
-        doubleDamageInd.SetActive(false);
+        if (doubleDamageInd)
+            doubleDamageInd.SetActive(false);
 		canFire = true;
 	}
 
@@ -72,5 +92,31 @@ public class FiringCtrl : MonoBehaviour
         }
 
         return damage;
+    }
+
+    void EnemyTargeting ()
+    {
+        Vector3 _dirFacing = transform.right;
+
+        var rayStart = transform.position;
+        var rayDir = _dirFacing;
+        float rayDist = enemySight;
+
+        Debug.DrawRay(rayStart, rayDir * rayDist, Color.green);
+
+        RaycastHit2D[] hits = Physics2D.RaycastAll(rayStart, rayDir, rayDist, 1 << LayerMask.NameToLayer("Default"));
+
+        if (hits != null)
+        {
+            foreach(RaycastHit2D hit in hits)
+            {
+                Debug.Log(hit.collider.name);
+
+                if (hit.collider.tag == "Player")
+                {
+                    StartCoroutine(FireAtRandom());
+                }
+		    }
+        }
     }
 }

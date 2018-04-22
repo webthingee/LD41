@@ -396,12 +396,13 @@ MonoBehaviour:
   charName: 
   charStrength: 0
   charHealth: 0
-  charMaxHealth: 0
+  charMaxHealth: 111
   damageSound: {fileID: 11400000, guid: 7b9781d8ca431e64499ed75c3649a2ba, type: 2}
   deathEffect: {fileID: 0}
   deathSound: {fileID: 11400000, guid: c869bbffff30a914d962f4c8d51e6211, type: 2}
   weaponAnchor: {fileID: 4126850200208358}
   cardData: {fileID: 11400000, guid: e6dec0939d2054c3a9a1e52261b10a2d, type: 2}
+  cards: []
 --- !u!114 &114614069565579574
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -24,6 +24,8 @@ GameObject:
   - component: {fileID: 114375686119848738}
   - component: {fileID: 114776447954840070}
   - component: {fileID: 114969974353154904}
+  - component: {fileID: 114415830115933008}
+  - component: {fileID: 114244609530775114}
   m_Layer: 10
   m_Name: Enemy
   m_TagString: Enemy
@@ -96,7 +98,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1228890349986606}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -10.418638, y: -3.864541, z: 0}
+  m_LocalPosition: {x: -1.5, y: -1.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4190762678188798}
@@ -132,7 +134,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -148,6 +150,28 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &114244609530775114
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1228890349986606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c56e0d1c160644ce9ff713ecaa9fa8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canFire: 1
+  enemySight: 5
+  projectile: {fileID: 1304158419423454, guid: 6cb07f39c7b064dc5bd3b9b69551f676, type: 2}
+  gunPoint: {fileID: 4190762678188798}
+  projectileSpeed: 11
+  rateOfFire: 1
+  doubleDamage: 0
+  doubleDamageInd: {fileID: 0}
+  damage: 1
+  fireSound: {fileID: 0}
+  isEnemy: 1
 --- !u!114 &114375686119848738
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -198,6 +222,18 @@ MonoBehaviour:
     m_RotationOrder: 4
   totalHorizontalRays: 8
   totalVerticalRays: 4
+--- !u!114 &114415830115933008
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1228890349986606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 528c51d7bdcde4b948dbaedb343cb1e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterSprite: {fileID: 212051078750354384}
 --- !u!114 &114776447954840070
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -243,11 +279,11 @@ MonoBehaviour:
   isGrounded: 0
   isRight: 0
   isLeft: 0
-  edgeDistance: 0
-  canMove: 0
+  edgeDistance: 1
+  canMove: 1
   walkable:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 258
   verticalDirection: 1
 --- !u!212 &212051078750354384
 SpriteRenderer:

@@ -8,6 +8,7 @@ public class Projectile : MonoBehaviour
     [ShowOnly] public float projectileSpeed;
     public float projectileRange;
 	public GameObject impactEffect;
+    public bool damageHero;
     public int damage;
 
     Vector2 firingPoint;
@@ -40,7 +41,15 @@ public class Projectile : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
 	{
         Component damageableComponent = other.gameObject.GetComponent(typeof(IDamageable)); // nullable value
-		if (other.tag == "Enemy")
+		if (other.tag == "Enemy" && !damageHero)
+		{
+			if (damageableComponent)
+			{
+				(damageableComponent as IDamageable).TakeDamage(damage);
+				Destroy(this.gameObject);
+			}
+		}
+        if (other.tag == "Player" && damageHero)
 		{
 			if (damageableComponent)
 			{
