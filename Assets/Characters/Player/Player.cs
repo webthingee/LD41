@@ -35,6 +35,6 @@ public class Player : MonoBehaviour
         {
             Destroy(weaponAnchor.GetComponentInChildren<FiringCtrl>().gameObject);
         }
-        GameObject weapon = Instantiate(cardData.weapon, weaponAnchor.position, Quaternion.identity, weaponAnchor);
+        GameObject weapon = Instantiate(cardData.weapon, weaponAnchor.position, weaponAnchor.transform.rotation, weaponAnchor);
     }
 }

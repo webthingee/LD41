@@ -143,6 +143,7 @@ MonoBehaviour:
   projectileSpeed: 22
   rateOfFire: 1
   doubleDamage: 0
+  doubleDamageInd: {fileID: 0}
   damage: 1
   fireSound: {fileID: 11400000, guid: e5ece04de0f6546a796a79d750a08bbd, type: 2}
 --- !u!114 &114829791370469354

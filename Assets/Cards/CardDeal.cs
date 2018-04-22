@@ -9,6 +9,13 @@ public class CardDeal : MonoBehaviour
 
     public CardData[] cardData;
 
+    private void Start()
+    {
+        DealACard();
+        DealACard();
+        DealACard();
+    }
+
     private void Update()
     {
         if (Input.GetKeyUp(KeyCode.M))

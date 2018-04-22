@@ -5,6 +5,7 @@ using UnityEngine;
 public class Toss : MonoBehaviour 
 {
     public GameObject grenade;
+    public GameObject dbl;
 
 	void Update () 
     {

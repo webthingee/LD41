@@ -46,7 +46,7 @@ public class PlayerMovement : CharacterMovement
             {
                 //moveDirection.y = 0;
                 isClimbing = false;
-                moveDirection.y = jumpSpeed;
+                moveDirection.y = jumpSpeed * 2;
                 canDoubleJump = true;
                 isJumping = true;
                 jumpAvailable = false;

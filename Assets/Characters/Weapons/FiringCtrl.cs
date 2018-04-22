@@ -12,12 +12,20 @@ public class FiringCtrl : MonoBehaviour
     public float projectileSpeed;
     public float rateOfFire = 1.0f;
     public bool doubleDamage;
+    public GameObject doubleDamageInd;
     public int damage = 1;
     public AudioEvent fireSound;
     
+    private void Awake()
+    {
+        doubleDamageInd = GetComponentInParent<Toss>().dbl;
+        doubleDamageInd.SetActive(false); 
+    }
+
     public void DoubleDamage ()
     {
         doubleDamage = true;
+        doubleDamageInd.SetActive(true);
     }
 
     public void PullTrigger ()
@@ -47,6 +55,7 @@ public class FiringCtrl : MonoBehaviour
         yield return new WaitForSeconds(_waitTime);
         
         doubleDamage = false;
+        doubleDamageInd.SetActive(false);
 		canFire = true;
 	}
 
