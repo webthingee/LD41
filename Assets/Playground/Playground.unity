@@ -1014,36 +1014,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4954998808587140, guid: 43851acb11c66440d876e81ed8a8cbdd, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4954998808587140, guid: 43851acb11c66440d876e81ed8a8cbdd, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4954998808587140, guid: 43851acb11c66440d876e81ed8a8cbdd, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4954998808587140, guid: 43851acb11c66440d876e81ed8a8cbdd, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4954998808587140, guid: 43851acb11c66440d876e81ed8a8cbdd, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 61632496324309070, guid: 43851acb11c66440d876e81ed8a8cbdd,
-        type: 2}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114877410895220974, guid: 43851acb11c66440d876e81ed8a8cbdd,
-        type: 2}
-      propertyPath: isGrounded
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 43851acb11c66440d876e81ed8a8cbdd, type: 2}
   m_IsPrefabParent: 0

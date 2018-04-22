@@ -79,6 +79,6 @@ public class Player : Character
         {
             Destroy(weaponAnchor.GetComponentInChildren<FiringCtrl>().gameObject);
         }
-        GameObject weapon = Instantiate(cardData.weapon, weaponAnchor.position, weaponAnchor.transform.rotation, weaponAnchor);
+        Instantiate(cardData.weapon, weaponAnchor.position, weaponAnchor.transform.rotation, weaponAnchor);
     }
 }
