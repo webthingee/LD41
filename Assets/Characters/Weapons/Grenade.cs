@@ -26,7 +26,7 @@ public class Grenade : MonoBehaviour
     {
         yield return new WaitForSeconds(2f);
 
-        RaycastHit2D[] hits = Physics2D.CircleCastAll(transform.position, 1f, Vector2.up, 0f, 1 << LayerMask.NameToLayer("Obstacle"));
+        RaycastHit2D[] hits = Physics2D.CircleCastAll(transform.position, 1.5f, Vector2.up, 0f, 1 << LayerMask.NameToLayer("Obstacle"));
         if (hits != null)
         {
             foreach(RaycastHit2D hit in hits)
