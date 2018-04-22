@@ -11,10 +11,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a967d2aaceb1b4697b8ed61fe5dd6c94, type: 3}
   m_Name: walking2
   m_EditorClassIdentifier: 
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: 0a5691358a789f1498d4da38f9fe113e, type: 3}
   volumeAdjust:
-    UseConstant: 1
+    UseConstant: 0
     ConstantValue: 0
-    Variable: {fileID: 0}
+    Variable: {fileID: 11400000, guid: c5c68b914227042e68bae4b0ed4cc3e4, type: 2}
   volume: 1
   pitch: 1

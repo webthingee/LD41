@@ -11,10 +11,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c720b0d15a7d941b99e1c2b8345c88a4, type: 3}
   m_Name: Level 3
   m_EditorClassIdentifier: 
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: d12eea2940fed614e99e80a73c0e2254, type: 3}
   volumeAdjust:
-    UseConstant: 1
+    UseConstant: 0
     ConstantValue: 0
-    Variable: {fileID: 0}
+    Variable: {fileID: 11400000, guid: 3b411930dbe8a48d8a7331671d6251e2, type: 2}
   volume: 1
   loop: 1
