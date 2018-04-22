@@ -181,7 +181,7 @@ MonoBehaviour:
   charStrength: 0
   charHealth: 0
   charMaxHealth: 4
-  damageSound: {fileID: 11400000, guid: 30d0766338eb341baa72678177df8725, type: 2}
+  damageSound: {fileID: 11400000, guid: 9f5528d6bb427b146841f75616538da2, type: 2}
   deathEffect: {fileID: 0}
   deathSound: {fileID: 11400000, guid: 65e97ba337fa9b544a7c9506c0b350a5, type: 2}
   damage: 0

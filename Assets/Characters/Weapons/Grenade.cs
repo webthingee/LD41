@@ -12,7 +12,8 @@ public class Grenade : MonoBehaviour
     void Awake () 
     {
         StartCoroutine(DamageArea());
-        throwSound.Play(SoundManager.Instance.GetOpenAudioSource()); 
+        if (throwSound)
+            throwSound.Play(SoundManager.Instance.GetOpenAudioSource()); 
 	}
 
     void OnDrawGizmosSelected () {
