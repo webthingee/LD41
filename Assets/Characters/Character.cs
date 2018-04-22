@@ -6,7 +6,6 @@ using UnityEngine.Audio;
 public class Character : MonoBehaviour, IDamageable 
 {
     #region     Properties
-
     [Header("Character Stats")]
     [SerializeField] string charName;
     [SerializeField] float charStrength;
@@ -63,7 +62,7 @@ public class Character : MonoBehaviour, IDamageable
         StartCoroutine(Flash(0.05f, 3));
         DamageResults(this.gameObject.tag);
 
-        if (CharHealth < 0)
+        if (CharHealth <= 0)
         {
             DeathResults(this.gameObject.tag);
             Destroy(this.gameObject);
