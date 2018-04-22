@@ -25,4 +25,18 @@ public class Enemy : Character
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        Debug.Log("Trigger");
+        Component damageableComponent = other.gameObject.GetComponent(typeof(IDamageable)); // nullable value
+		if (other.gameObject.tag == "Player") 
+		{
+            if (damageableComponent)
+			{
+				//(damageableComponent as IDamageable).TakeDamage(damage);
+				other.GetComponent<Player>().CardRemove();
+			}
+        }
+    }
+
 }

@@ -87,12 +87,12 @@ public class Character : MonoBehaviour, IDamageable
         damageSound.Play(SoundManager.Instance.GetOpenAudioSource()); 
     }   
     
-    void DeathResults (string _tag)
+    public virtual void DeathResults (string _tag)
     {
         // GameObject deathParticle = Instantiate(deathEffect, transform.position, Quaternion.identity, null);
         damageSound.Play(SoundManager.Instance.GetOpenAudioSource()); 
         deathSound.Play(SoundManager.Instance.GetOpenAudioSource()); 
-        FindObjectOfType<CardDeal>().DealACard();
+        FindObjectOfType<CardDeal>().DealACard(1);
 
         // if (_tag == "Player")
         // {

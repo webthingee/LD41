@@ -34,13 +34,6 @@ public class Card : MonoBehaviour, IPointerClickHandler, IPointerExitHandler, IP
         }
     }
 
-    // void Awake ()
-    // {
-    //     usesRemaining = Random.Range(1, cardData.numUses + 1);
-    //     graphic.texture = cardData.graphic;
-    //     graphic.color = cardData.tintColor;
-    // }
-
     void Start () 
     {
 		usesRemaining = UnityEngine.Random.Range(1, cardData.numUses + 1);
@@ -49,6 +42,11 @@ public class Card : MonoBehaviour, IPointerClickHandler, IPointerExitHandler, IP
         titleUI.text = cardData.title;
 		descriptionUI.text = cardData.description;
 		numUsesUI.text = cardData.numUses.ToString();
+
+        if (cardData.title == "GunSlinger")
+        {
+            usesRemaining = cardData.numUses;
+        }
 	}
 	
 	void Update () 
@@ -56,16 +54,15 @@ public class Card : MonoBehaviour, IPointerClickHandler, IPointerExitHandler, IP
 		numUsesUI.text = usesRemaining.ToString();
 	}
 
-
     public void OnPointerClick(PointerEventData eventData)
     {
         if (eventData.button == PointerEventData.InputButton.Left) {
             ExecuteCardAction();
-            Debug.Log("Left Mouse Down: " + eventData.pointerCurrentRaycast.gameObject.name);
+            //Debug.Log("Left Mouse Down: " + eventData.pointerCurrentRaycast.gameObject.name);
         }
 
         if (eventData.button == PointerEventData.InputButton.Right) {
-            Debug.Log("Right Mouse Down: " + eventData.pointerCurrentRaycast.gameObject.name);
+            //Debug.Log("Right Mouse Down: " + eventData.pointerCurrentRaycast.gameObject.name);
         }
     }
 

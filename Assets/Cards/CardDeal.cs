@@ -8,30 +8,13 @@ public class CardDeal : MonoBehaviour
     public GameObject card;
 
     public CardData[] cardData;
-
-    private void Start()
-    {
-        DealACard();
-        DealACard();
-        DealACard();
-    }
-
-    private void Update()
-    {
-        if (Input.GetKeyUp(KeyCode.M))
-        {
-            DealACard();
-        }
-    }
     
-    public void DealACard ()
+    public void DealACard (int _num)
     {
-        GameObject newCard = Instantiate(card, cardArea.transform.position, card.transform.rotation, cardArea.transform);
-        newCard.GetComponent<Card>().cardData = cardData[Random.Range(0, cardData.Length)];
-    }
-
-    public void RandomCardDetails ()
-    {
-
+        for (int i = 0; i < _num; i++)
+        {
+            GameObject newCard = Instantiate(card, cardArea.transform.position, card.transform.rotation, cardArea.transform);
+            newCard.GetComponent<Card>().cardData = cardData[Random.Range(0, cardData.Length)];            
+        }
     }
 }
