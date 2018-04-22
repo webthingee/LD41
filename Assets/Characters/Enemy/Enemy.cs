@@ -14,6 +14,7 @@ public class Enemy : Character
 
     void OnCollisionEnter2D(Collision2D other)
     {
+        Debug.Log("Collide");
         Component damageableComponent = other.gameObject.GetComponent(typeof(IDamageable)); // nullable value
 		if (other.gameObject.tag == "Player") 
 		{

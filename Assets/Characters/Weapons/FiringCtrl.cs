@@ -7,6 +7,7 @@ public class FiringCtrl : MonoBehaviour
 {
     public bool canFire = true;
     public GameObject projectile;
+    public Transform gunPoint;
     public float projectileSpeed;
     public float rateOfFire = 1.0f;
     public bool doubleDamage;
@@ -21,7 +22,7 @@ public class FiringCtrl : MonoBehaviour
     {
         if (canFire)
         {
-            StartCoroutine(FireBullets(transform.up, damage, rateOfFire));
+            StartCoroutine(FireBullets(transform.right, damage, rateOfFire));
         }
     }
 
@@ -29,12 +30,12 @@ public class FiringCtrl : MonoBehaviour
 	{			
 		canFire = false;
 				
-		Vector3 _position = transform.position;
+		Vector3 _position = gunPoint.position;
 			_position.z = 0;
 		
 		GameObject bullet = Instantiate(projectile, _position, Quaternion.identity);
             bullet.transform.up = _direction;
-            bullet.GetComponent<Projectile>().FiringPoint = transform.position;
+            bullet.GetComponent<Projectile>().FiringPoint = gunPoint.position;
             bullet.GetComponent<Projectile>().projectileSpeed = projectileSpeed;
             bullet.GetComponent<Projectile>().damage = CalculateDamage(); // calc before it gets here
             //bullet.GetComponent<Projectile>().projectileRange = weapon.Range;            

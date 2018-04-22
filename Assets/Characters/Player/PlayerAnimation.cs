@@ -5,13 +5,13 @@ using UnityEngine;
 public class PlayerAnimation : MonoBehaviour 
 {
     public GameObject playerContainer;
-    //Animator anim;
+    Animator anim;
     CharacterMovement cm;
         
     void Awake ()
     {
         cm = GetComponent<CharacterMovement>();
-        //anim = playerSprite.GetComponentInChildren<Animator>();
+        anim = GetComponentInChildren<Animator>();
     }
 
     void Update ()
@@ -19,7 +19,7 @@ public class PlayerAnimation : MonoBehaviour
         //float yAxis = Input.GetAxis("Vertical");
         ChangeDirection(cm.GetMoveDirection.x);
 
-        //anim.SetFloat("Forward", Mathf.Abs(cm.GetMoveDirection.x));
+        anim.SetFloat("Forward", Mathf.Abs(cm.GetMoveDirection.x));
         //anim.SetFloat("Looking", yAxis);
     }
 

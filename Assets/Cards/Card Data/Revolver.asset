@@ -9,16 +9,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 88b5db37f963440cdba5d82a0b1cb7cc, type: 3}
-  m_Name: Shotgun
+  m_Name: Revolver
   m_EditorClassIdentifier: 
-  title: ShotGun
-  description: ShotGun
+  title: Revolver
+  description: Revolver
   numUses: 1
   targetObject: Player
   graphic: {fileID: 2800000, guid: 9ee00b51859874a02bd5ffac91caea80, type: 3}
-  tintColor: {r: 0.5182201, g: 0.7178066, b: 0.99264705, a: 1}
+  tintColor: {r: 0.28114188, g: 0.3175337, b: 0.36764705, a: 1}
   cardEffect: {fileID: 11400000, guid: b7598e4ae0b1e4b079bf2a2de3de3dec, type: 2}
-  weapon: {fileID: 1165709725222192, guid: 7f00bd2ef7ec44852a32156fbb4e5c38, type: 2}
+  weapon: {fileID: 1165709725222192, guid: b619bd0b9d337448698a89e915070ee9, type: 2}
   doubleDamage: 0
   damageBonus: 0
   clips: {fileID: 0}

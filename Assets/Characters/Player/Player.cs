@@ -5,12 +5,12 @@ using UnityEngine;
 public class Player : MonoBehaviour 
 {
     public Transform weaponAnchor;
-    public GameObject weaponInHand;
+    //public GameObject weaponInHand;
     public CardData cardData;
 
 	void Start ()
     {
-		
+		PickUpWeapon();
 	}
 	
 	void Update () 
@@ -35,6 +35,6 @@ public class Player : MonoBehaviour
         {
             Destroy(weaponAnchor.GetComponentInChildren<FiringCtrl>().gameObject);
         }
-        GameObject weapon = Instantiate(cardData.weapon, weaponAnchor.position, weaponInHand.transform.rotation, weaponAnchor);
+        GameObject weapon = Instantiate(cardData.weapon, weaponAnchor.position, Quaternion.identity, weaponAnchor);
     }
 }

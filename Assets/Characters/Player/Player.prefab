@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 114134900666755412}
   - component: {fileID: 114537149540249314}
   - component: {fileID: 114544551473645568}
+  - component: {fileID: 114714563674381206}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -87,7 +88,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1656486041800796}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.142, y: 0.098, z: 0}
+  m_LocalPosition: {x: 0.016, y: -0.014, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4414268837457552}
@@ -128,7 +129,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1481788783146118}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7, y: -4, z: 0}
+  m_LocalPosition: {x: -3.38, y: -4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4414268837457552}
@@ -189,7 +190,7 @@ Animator:
   m_GameObject: {fileID: 1276006563806744}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 073dbd81ee8d343a2a5481c269f38573, type: 2}
+  m_Controller: {fileID: 9100000, guid: 5a8eb3bace294448291369a4fcc5adb2, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -258,7 +259,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd5736051fbaf41bd97ac6bc52021273, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 3
+  moveSpeed: 2
   climbSpeed: 2
   jumpSpeed: 8
   doubleJumpSpeed: 0
@@ -329,6 +330,35 @@ MonoBehaviour:
   weaponAnchor: {fileID: 4126850200208358}
   weaponInHand: {fileID: 1165709725222192, guid: b619bd0b9d337448698a89e915070ee9,
     type: 2}
+  cardData: {fileID: 0}
+--- !u!114 &114714563674381206
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1481788783146118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e839e4c12473014b9b3d3faccc0f61d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: b7598e4ae0b1e4b079bf2a2de3de3dec, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114544551473645568}
+        m_MethodName: CardDataProcess
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!212 &212399991303221688
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -363,7 +393,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 56d7fb1873a2d4448a8666329a2c50b0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: feb0508ee03914e8bb8bf8182f2cf001, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
