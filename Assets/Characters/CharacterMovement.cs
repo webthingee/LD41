@@ -67,8 +67,8 @@ public class CharacterMovement : MonoBehaviour
 
         /// Check if we are on the ground
         isGrounded = flags.below;
-        // isRight = flags.right;
-        // isLeft = flags.left;
+        //isRight = flags.right;
+        //isLeft = flags.left;
 
         /// Check if we hit our head
         // if (flags.above)

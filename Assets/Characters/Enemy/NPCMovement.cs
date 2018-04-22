@@ -8,7 +8,7 @@ public class NPCMovement : CharacterMovement
     public bool canMove;
 
     public LayerMask walkable;
-    private int verticalDirection = 1;
+    public int verticalDirection = 1;
 
     public int VerticalDirection
     {
@@ -27,9 +27,16 @@ public class NPCMovement : CharacterMovement
     {
         if (canMove)
         {
-            if (!SomethingEast() || WallEast()) { verticalDirection = -1; }
-            if (!SomethingWest() || WallWest()) { verticalDirection = 1; }         
-            MoveCharacter ();
+            if (WallEast()) { verticalDirection = -1; }
+            if (WallWest()) { verticalDirection = 1; }         
+            MoveCharacter();
+        }
+        else
+        {
+            verticalDirection = 1;
+            moveDirection.x = 0;
+            moveDirection.x *= 0;
+            moveDirection.y = 0;
         }
         base.Update();
 	}
@@ -85,17 +92,17 @@ public class NPCMovement : CharacterMovement
         // }
     }
 
-    bool SomethingEast ()
-    {
-        var rayStart = transform.position;
-        rayStart.x += edgeDistance;
-        var rayDir = Vector2.down;
-        float rayDist = .5f;
+    // bool SomethingEast ()
+    // {
+    //     var rayStart = transform.position;
+    //     rayStart.x += edgeDistance;
+    //     var rayDir = Vector2.down;
+    //     float rayDist = .5f;
 
-        Debug.DrawRay(rayStart, rayDir * rayDist, Color.green);
+    //     Debug.DrawRay(rayStart, rayDir * rayDist, Color.green);
 
-        return Physics2D.Raycast(rayStart, rayDir, rayDist, walkable);
-    }
+    //     return Physics2D.Raycast(rayStart, rayDir, rayDist, walkable);
+    // }
 
     bool WallEast ()
     {
@@ -108,17 +115,17 @@ public class NPCMovement : CharacterMovement
         return Physics2D.Raycast(rayStart, rayDir, rayDist, walkable);
     }
 
-    bool SomethingWest ()
-    {
-        var rayStart = transform.position;
-        rayStart.x -= edgeDistance;
-        var rayDir = Vector2.down;
-        float rayDist = .5f;
+    // bool SomethingWest ()
+    // {
+    //     var rayStart = transform.position;
+    //     rayStart.x -= edgeDistance;
+    //     var rayDir = Vector2.down;
+    //     float rayDist = .5f;
 
-        Debug.DrawRay(rayStart, rayDir * rayDist, Color.green);
+    //     Debug.DrawRay(rayStart, rayDir * rayDist, Color.green);
 
-        return Physics2D.Raycast(rayStart, rayDir, rayDist, walkable);
-    }
+    //     return Physics2D.Raycast(rayStart, rayDir, rayDist, walkable);
+    // }
 
         bool WallWest ()
     {
