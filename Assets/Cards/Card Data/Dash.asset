@@ -13,11 +13,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: Dash
   description: Dash
-  numUses: 0
+  numUses: 1
   targetObject: 
   graphic: {fileID: 2800000, guid: 94a2c5b73b0814ffb9b9945e6bd475e4, type: 3}
   tintColor: {r: 1, g: 1, b: 1, a: 1}
-  cardEffect: []
+  cardEffect:
+  - {fileID: 11400000, guid: a3396623b35c5416f8f2654b5673e1ca, type: 2}
   weapon: {fileID: 0}
   doubleDamage: 0
   damageBonus: 0

@@ -1,10 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using RoboRyanTron.Unite2017.Events;
 
 public class PlayerMovement : CharacterMovement 
 {
     public bool doJump;
+    public bool doDash = false;
+    public float dashDistance = 3f;
+    public AudioEvent dashSound;
+    public GameObject dashDisplay;
     public float latterDetection;
 
     protected override void Update () 
@@ -22,31 +27,14 @@ public class PlayerMovement : CharacterMovement
             doJump = true;
     }
 
+    public void Dash ()
+    {
+        // if (dashAvailable)
+            doDash = true;
+    }
+
     void MoveCharacter ()
     {
-        /// Jump : Double Jump
-        // if (canDoubleJump && Input.GetButtonDown("Jump"))
-        // {
-        //     if (canDoubleJump)
-        //     {
-        //         moveDirection.y = doubleJumpSpeed;
-        //         canDoubleJump = false;
-        //     }
-        // }
-
-        /// Wall Climb
-        // if (Input.GetButton("Utility"))
-        // {
-        //     if (isRight || isLeft)
-        //     {
-        //         isClimbing = true;
-        //     }
-        // }
-        // else
-        // {
-        //     isClimbing = false;
-        // }
-
         /// Grounded
         if (isGrounded)
         {
@@ -64,10 +52,12 @@ public class PlayerMovement : CharacterMovement
                 jumpAvailable = false;
                 doJump = false;
             }
-            // if (Input.GetAxisRaw("Jump") == 0)
-            // {
-            //     jumpAvailable = true;
-            // }
+
+            if (doDash)
+            {
+                DoTheDash();
+                doDash = false;
+            }
         }
 
         if (LatterDetection())
@@ -87,42 +77,7 @@ public class PlayerMovement : CharacterMovement
             isClimbing = false;
         }
 
-        /// Jump : Hold for full height
-        // if (Input.GetButtonUp("Jump"))
-        // {
-        //     if (moveDirection.y > 0)
-        //     {
-        //         moveDirection.y = moveDirection.y * 0.5f;
-        //     }
-        // }
     }
-
-    // private void WallClimbing()
-    // {
-    //     // @TODO: can still jump up during climb, not sure I like that
-    //     moveDirection.x = 0;
-        
-    //     if (WallClimbNorth() || WallClimbSouth())
-    //         moveDirection.y = climbAxis;
-        
-    //     if (!WallClimbNorth() && moveDirection.y >= 0)
-    //         moveDirection.y = 0;
-
-    //     if (!WallClimbSouth() && moveDirection.y <= 0)
-    //         moveDirection.y = 0;
-
-    //     moveDirection.y *= speed / 4f;
-
-    //     if (Input.GetAxisRaw("Jump") != 0 && Input.GetAxis("Horizontal") != 0)
-    //     {
-    //         //moveDirection.y = 0;
-    //         isClimbing = false;
-    //         moveDirection.y = jumpSpeed;
-    //         canDoubleJump = true;
-    //         isJumping = true;
-    //         jumpAvailable = false;
-    //     }
-    // }
 
     bool LatterDetection ()
     {
@@ -135,16 +90,37 @@ public class PlayerMovement : CharacterMovement
         return Physics2D.Raycast(rayStart, rayDir, rayDist, 1 << LayerMask.NameToLayer("Latter"));
     }
 
-    // bool WallClimbSouth ()
-    // {
-    //     var rayStart = transform.position;
-    //     rayStart.x -= 0.5f;
-    //     rayStart.y -= 0.1f;
-    //     var rayDir = Vector2.right;
-    //     float rayDist = 1f;
+    void DoTheDash ()
+    {
+        doDash = false;
+        Vector3 _dirFacing = GetComponentInChildren<FiringCtrl>().transform.right;
 
-    //     Debug.DrawRay(rayStart, rayDir * rayDist, Color.green);
+        var rayStart = transform.position;
+        var rayDir = _dirFacing;
+        float rayDist = dashDistance;
 
-    //     return Physics2D.Raycast(rayStart, rayDir, rayDist, 1 << LayerMask.NameToLayer("Walkable"));
-    // }
+        Debug.DrawRay(rayStart, rayDir * rayDist, Color.green);
+
+        RaycastHit2D[] hits = Physics2D.RaycastAll(rayStart, rayDir, rayDist, 1 << LayerMask.NameToLayer("Obstacle"));
+
+        if (hits != null)
+        {
+            Debug.Log("Hits");
+            foreach(RaycastHit2D hit in hits)
+            {
+                Debug.Log(hit.collider.name);
+
+                Component damageableComponent = hit.collider.gameObject.GetComponent(typeof(IDamageable)); // nullable value
+
+			    if (damageableComponent)
+			    {
+				    (damageableComponent as IDamageable).TakeDamage(10);
+			    }
+		    }
+        }
+        Instantiate(dashDisplay, transform.position, transform.transform.rotation);
+        dashSound.Play(SoundManager.Instance.GetOpenAudioSource());
+        Vector2 dashPos = transform.position + (_dirFacing * dashDistance);
+        transform.position = dashPos;
+    }
 }

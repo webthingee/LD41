@@ -41,9 +41,10 @@ GameObject:
   - component: {fileID: 114231243071102444}
   - component: {fileID: 114072299668055526}
   - component: {fileID: 114134900666755412}
-  - component: {fileID: 114537149540249314}
   - component: {fileID: 114544551473645568}
+  - component: {fileID: 114537149540249314}
   - component: {fileID: 114714563674381206}
+  - component: {fileID: 114614069565579574}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -59,6 +60,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4126850200208358}
+  - component: {fileID: 114665082112911092}
+  - component: {fileID: 114334804885393238}
   m_Layer: 0
   m_Name: weaponAnchor
   m_TagString: Untagged
@@ -129,7 +132,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1481788783146118}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.38, y: -4, z: 0}
+  m_LocalPosition: {x: -23.27, y: -4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4414268837457552}
@@ -275,6 +278,11 @@ MonoBehaviour:
   isRight: 0
   isLeft: 0
   doJump: 0
+  doDash: 0
+  dashDistance: 3
+  dashSound: {fileID: 11400000, guid: f3c442b7489242d48bec52ddc6a974e3, type: 2}
+  dashDisplay: {fileID: 1471974958284394, guid: a8c8ffcc7def04a67ad4e2d39407c2ba,
+    type: 2}
   latterDetection: 0.5
 --- !u!114 &114231243071102444
 MonoBehaviour:
@@ -288,6 +296,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerContainer: {fileID: 1864874784341630}
+--- !u!114 &114334804885393238
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1656486041800796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e839e4c12473014b9b3d3faccc0f61d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: c5b8fc526efc64d8ba9cea39a457becb, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114665082112911092}
+        m_MethodName: Throw
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114537149540249314
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -328,9 +364,47 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponAnchor: {fileID: 4126850200208358}
-  weaponInHand: {fileID: 1165709725222192, guid: b619bd0b9d337448698a89e915070ee9,
-    type: 2}
-  cardData: {fileID: 0}
+  cardData: {fileID: 11400000, guid: e6dec0939d2054c3a9a1e52261b10a2d, type: 2}
+--- !u!114 &114614069565579574
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1481788783146118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e839e4c12473014b9b3d3faccc0f61d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: a3396623b35c5416f8f2654b5673e1ca, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114134900666755412}
+        m_MethodName: Dash
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &114665082112911092
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1656486041800796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a9ac41828cc044728197b5955cc2834, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grenade: {fileID: 1304158419423454, guid: 3ba56aff0c9644207b1e9d3b2e2643a1, type: 2}
 --- !u!114 &114714563674381206
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -392,7 +466,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 11
   m_Sprite: {fileID: 21300000, guid: feb0508ee03914e8bb8bf8182f2cf001, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
