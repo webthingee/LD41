@@ -8,6 +8,7 @@ public class Grenade : MonoBehaviour
 	public AudioEvent throwSound;
     public AudioEvent explodeSound;
     public AudioEvent hitGroundSound;
+    public int gDamage = 5;
     public GameObject explosion;
     
     void Awake () 
@@ -41,7 +42,7 @@ public class Grenade : MonoBehaviour
 
 			    if (damageableComponent)
 			    {
-				    (damageableComponent as IDamageable).TakeDamage(10);
+				    (damageableComponent as IDamageable).TakeDamage(gDamage);
                     Instantiate(explosion, transform.position, Quaternion.identity);
 				    Destroy(this.gameObject);
 			    }
