@@ -59,13 +59,15 @@ public class Character : MonoBehaviour, IDamageable
     public void TakeDamage(float _amount)
     {
         CharHealth -= _amount;
-        StartCoroutine(Flash(0.05f, 3));
-        DamageResults(this.gameObject.tag);
-
         if (CharHealth <= 0)
         {
             DeathResults(this.gameObject.tag);
             Destroy(this.gameObject);
+        }
+        else
+        {
+            StartCoroutine(Flash(0.05f, 3));
+            DamageResults(this.gameObject.tag);
         }
     }
 

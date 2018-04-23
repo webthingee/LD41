@@ -38,8 +38,6 @@ public class Player : Character
 
     public void CardRemove ()
     {
-        Debug.Log("CardRemove");
-
         if (cards.Count > 1)
         {
             int rand = Random.Range(1, cards.Count);
@@ -48,7 +46,7 @@ public class Player : Character
         }
         else
         {
-            Debug.Log("YOU ARE DEAD!");
+            //Debug.Log("YOU ARE DEAD!");
             cards[0].usesRemaining --;
 
             if (cards[0].usesRemaining > 0) 
@@ -58,7 +56,7 @@ public class Player : Character
             }
             else
             {
-                Debug.Log("GAME OVER");
+                //Debug.Log("GAME OVER");
                 GameObject.Find("Game Manager").GetComponent<GameManager>().gameOverImg.SetActive(true);
                 Destroy(this.gameObject);
             }

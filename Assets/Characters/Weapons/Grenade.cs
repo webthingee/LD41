@@ -36,8 +36,6 @@ public class Grenade : MonoBehaviour
         {
             foreach(RaycastHit2D hit in hits)
             {
-                Debug.Log(hit.collider.name);
-
                 Component damageableComponent = hit.collider.gameObject.GetComponent(typeof(IDamageable)); // nullable value
 
 			    if (damageableComponent)

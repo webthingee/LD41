@@ -79,7 +79,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00b1ebf4f9ab846268b01265c5f5f7ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifetime: 3
+  lifetime: 0.33
 --- !u!114 &114169271842113476
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -94,6 +94,7 @@ MonoBehaviour:
   projectileSpeed: 2
   projectileRange: 0
   impactEffect: {fileID: 0}
+  damageHero: 0
   damage: 0
 --- !u!212 &212256758438779666
 SpriteRenderer:

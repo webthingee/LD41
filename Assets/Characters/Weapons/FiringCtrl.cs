@@ -110,8 +110,6 @@ public class FiringCtrl : MonoBehaviour
         {
             foreach(RaycastHit2D hit in hits)
             {
-                Debug.Log(hit.collider.name);
-
                 if (hit.collider.tag == "Player")
                 {
                     StartCoroutine(FireAtRandom());
