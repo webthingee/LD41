@@ -1,5 +1,5 @@
 {
-"companyName": "DefaultCompany",
+"companyName": "webthingee",
 "productName": "LD41",
 "dataUrl": "Game.data.unityweb",
 "asmCodeUrl": "Game.asm.code.unityweb",
@@ -8,6 +8,7 @@
 "TOTAL_MEMORY": 268435456,
 "graphicsAPI": ["WebGL 2.0", "WebGL 1.0"],
 "webglContextAttributes": {"preserveDrawingBuffer": false},
+"backgroundUrl": "Game.jpg",
 "splashScreenStyle": "Light",
-"backgroundColor": "#D78095"
+"backgroundColor": "#FFFFFF"
 }

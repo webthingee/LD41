@@ -34,5 +34,22 @@ public class GameManager : MonoBehaviour
         reloadImg.SetActive(false);
         gameOverImg.SetActive(false);
     }
+
+    public void StartEndCredits ()
+    {
+        Invoke("SuccessScene", 3f);
+    }
+
+    public void SuccessScene ()
+    {
+        Time.timeScale = 0;
+        SceneManager.LoadScene("Success Scene", LoadSceneMode.Additive);
+    }
+
+
+    public void RestartGame ()
+    {
+        SceneManager.LoadScene("Playground", LoadSceneMode.Single);
+    }
     
 }

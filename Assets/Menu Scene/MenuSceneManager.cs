@@ -8,6 +8,7 @@ public class MenuSceneManager : MonoBehaviour
 {
     [SerializeField] string gameScene;
     [SerializeField] string menuScene;
+    [SerializeField] string restartScene;
     [SerializeField] GameEvent MusicChangeEvent;    
     
     [Header("Music Volume")]
@@ -21,8 +22,15 @@ public class MenuSceneManager : MonoBehaviour
     [Header("Buttons")]
     public Button gameStartButton;
     public Button gameReturnButton;
-    public Button instructionsButton;
-    public Button backstoryButton;
+    public Button gameRestartButton;
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.P))
+        {
+            UnloadSceneAdd();
+        }
+    }
 
     public float MusicVolume
     {

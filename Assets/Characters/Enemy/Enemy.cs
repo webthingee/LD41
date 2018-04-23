@@ -24,4 +24,13 @@ public class Enemy : Character
         }
     }
 
+    private void OnDestroy()
+    {
+        if (this.name == "Bear Borg")
+        {
+            if (FindObjectOfType<GameManager>() != null)
+                FindObjectOfType<GameManager>().StartEndCredits();
+        }
+    }
+
 }
