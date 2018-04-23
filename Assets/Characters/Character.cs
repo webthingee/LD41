@@ -89,7 +89,9 @@ public class Character : MonoBehaviour, IDamageable
     
     public virtual void DeathResults (string _tag)
     {
-        // GameObject deathParticle = Instantiate(deathEffect, transform.position, Quaternion.identity, null);
+        if (deathEffect)
+            Instantiate(deathEffect, transform.position, Quaternion.identity, null);
+        
         damageSound.Play(SoundManager.Instance.GetOpenAudioSource()); 
         deathSound.Play(SoundManager.Instance.GetOpenAudioSource()); 
         FindObjectOfType<CardDeal>().DealACard(1);
