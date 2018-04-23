@@ -292,7 +292,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd5736051fbaf41bd97ac6bc52021273, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 2
+  moveSpeed: 3
   climbSpeed: 2
   jumpSpeed: 8
   doubleJumpSpeed: 0
@@ -326,6 +326,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerContainer: {fileID: 1864874784341630}
+  audioEvent: {fileID: 11400000, guid: 00f0116d2324342c9b1ac004886f4059, type: 2}
+  stepSpeed: 0.25
 --- !u!114 &114334804885393238
 MonoBehaviour:
   m_ObjectHideFlags: 1

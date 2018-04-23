@@ -42,11 +42,11 @@ public class PlayerMovement : CharacterMovement
             isJumping = false;
             jumpAvailable = true;
 
-            if (jumpAvailable && doJump) //Input.GetAxisRaw("Jump") != 0)
+            if (jumpAvailable && Input.GetAxisRaw("Jump") != 0) //doJump) //
             {
                 //moveDirection.y = 0;
                 isClimbing = false;
-                moveDirection.y = jumpSpeed * 2;
+                moveDirection.y = jumpSpeed;
                 canDoubleJump = true;
                 isJumping = true;
                 jumpAvailable = false;

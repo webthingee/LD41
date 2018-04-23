@@ -54,6 +54,7 @@ public class Projectile : MonoBehaviour
 			if (damageableComponent)
 			{
 				(damageableComponent as IDamageable).TakeDamage(damage);
+                other.GetComponent<Player>().CardRemove();
 				Destroy(this.gameObject);
 			}
 		}

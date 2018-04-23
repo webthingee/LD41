@@ -49,8 +49,10 @@ public class Grenade : MonoBehaviour
         }
         else
         {
+            Instantiate(explosion, transform.position, Quaternion.identity);
             Destroy(this.gameObject);
         }
+        Instantiate(explosion, transform.position, Quaternion.identity);
         Destroy(this.gameObject);
     }
 
