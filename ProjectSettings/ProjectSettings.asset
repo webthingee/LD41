@@ -18,7 +18,7 @@ PlayerSettings:
   m_SplashScreenBackgroundColor: {r: 0.14901961, g: 0.03529412, b: 0.33333334, a: 1}
   m_ShowUnitySplashScreen: 1
   m_ShowUnitySplashLogo: 1
-  m_SplashScreenOverlayOpacity: 1
+  m_SplashScreenOverlayOpacity: 0.588
   m_SplashScreenAnimation: 1
   m_SplashScreenLogoStyle: 0
   m_SplashScreenDrawMode: 1
@@ -41,8 +41,8 @@ PlayerSettings:
   m_SplashScreenLogos:
   - logo: {fileID: 10404, guid: 0000000000000000e000000000000000, type: 0}
     duration: 2
-  - logo: {fileID: 21300000, guid: 35960a9d097704435bdd2bb92ea5643c, type: 3}
-    duration: 2
+  - logo: {fileID: 21300000, guid: 133713bd3d86046c4ace0fd60e0760ec, type: 3}
+    duration: 4
   m_VirtualRealitySplashScreen: {fileID: 0}
   m_HolographicTrackingLossScreen: {fileID: 0}
   defaultScreenWidth: 1024
