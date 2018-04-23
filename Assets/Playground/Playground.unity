@@ -785,7 +785,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4679656757317500, guid: df5464985dd4c4ca9aba1491e519836a, type: 2}
       propertyPath: m_RootOrder
-      value: 12
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1206312007808466, guid: df5464985dd4c4ca9aba1491e519836a, type: 2}
       propertyPath: m_Name
@@ -1067,6 +1067,7 @@ GameObject:
   - component: {fileID: 461628599}
   - component: {fileID: 461628601}
   - component: {fileID: 461628600}
+  - component: {fileID: 461628602}
   m_Layer: 8
   m_Name: wall tile (2)
   m_TagString: Untagged
@@ -1156,6 +1157,26 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!50 &461628602
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 461628598}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!4 &544688315 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4852788319720702, guid: 26a2481e8cf234d638350b8494514bb2,
@@ -1299,6 +1320,7 @@ GameObject:
   - component: {fileID: 653498020}
   - component: {fileID: 653498022}
   - component: {fileID: 653498021}
+  - component: {fileID: 653498023}
   m_Layer: 8
   m_Name: wall tile
   m_TagString: Untagged
@@ -1317,7 +1339,7 @@ Transform:
   m_LocalScale: {x: 2.03125, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 1522092769}
-  m_RootOrder: 10
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &653498021
 BoxCollider2D:
@@ -1388,6 +1410,26 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!50 &653498023
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 653498019}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1001 &674330076
 Prefab:
   m_ObjectHideFlags: 0
@@ -1425,7 +1467,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4852788319720702, guid: 26a2481e8cf234d638350b8494514bb2, type: 2}
       propertyPath: m_RootOrder
-      value: 15
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 212893470051180914, guid: 26a2481e8cf234d638350b8494514bb2,
         type: 2}
@@ -2912,6 +2954,7 @@ GameObject:
   - component: {fileID: 1158026684}
   - component: {fileID: 1158026686}
   - component: {fileID: 1158026685}
+  - component: {fileID: 1158026687}
   m_Layer: 8
   m_Name: wall tile (1)
   m_TagString: Untagged
@@ -2930,7 +2973,7 @@ Transform:
   m_LocalScale: {x: 2.03125, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 1522092769}
-  m_RootOrder: 11
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1158026685
 BoxCollider2D:
@@ -3001,6 +3044,26 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!50 &1158026687
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1158026683}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1161958352
 GameObject:
   m_ObjectHideFlags: 0
@@ -3321,7 +3384,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4679656757317500, guid: df5464985dd4c4ca9aba1491e519836a, type: 2}
       propertyPath: m_RootOrder
-      value: 14
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1206312007808466, guid: df5464985dd4c4ca9aba1491e519836a, type: 2}
       propertyPath: m_Name
@@ -3633,7 +3696,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4852788319720702, guid: 26a2481e8cf234d638350b8494514bb2, type: 2}
       propertyPath: m_RootOrder
-      value: 17
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 212893470051180914, guid: 26a2481e8cf234d638350b8494514bb2,
         type: 2}
@@ -3860,14 +3923,14 @@ Transform:
   - {fileID: 986356382}
   - {fileID: 864509104}
   - {fileID: 1884280108}
-  - {fileID: 653498020}
-  - {fileID: 1158026684}
   - {fileID: 297594102}
   - {fileID: 1600012998}
   - {fileID: 1339145915}
   - {fileID: 674330077}
   - {fileID: 2053540163}
   - {fileID: 1418232576}
+  - {fileID: 1158026684}
+  - {fileID: 653498020}
   - {fileID: 461628599}
   - {fileID: 1988688519}
   m_Father: {fileID: 0}
@@ -4341,7 +4404,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4679656757317500, guid: df5464985dd4c4ca9aba1491e519836a, type: 2}
       propertyPath: m_RootOrder
-      value: 13
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 1206312007808466, guid: df5464985dd4c4ca9aba1491e519836a, type: 2}
       propertyPath: m_Name
@@ -5686,6 +5749,7 @@ GameObject:
   - component: {fileID: 1988688519}
   - component: {fileID: 1988688521}
   - component: {fileID: 1988688520}
+  - component: {fileID: 1988688522}
   m_Layer: 8
   m_Name: wall tile (3)
   m_TagString: Untagged
@@ -5775,6 +5839,26 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!50 &1988688522
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1988688518}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1001 &1997220205
 Prefab:
   m_ObjectHideFlags: 0
@@ -6004,7 +6088,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4852788319720702, guid: 26a2481e8cf234d638350b8494514bb2, type: 2}
       propertyPath: m_RootOrder
-      value: 16
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 212893470051180914, guid: 26a2481e8cf234d638350b8494514bb2,
         type: 2}
