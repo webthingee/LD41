@@ -8,12 +8,15 @@ public class Grenade : MonoBehaviour
 	public AudioEvent throwSound;
     public AudioEvent explodeSound;
     public AudioEvent hitGroundSound;
+    public GameObject explosion;
     
     void Awake () 
     {
         StartCoroutine(DamageArea());
         if (throwSound)
-            throwSound.Play(SoundManager.Instance.GetOpenAudioSource()); 
+        {
+            throwSound.Play(SoundManager.Instance.GetOpenAudioSource());
+        }
 	}
 
     void OnDrawGizmosSelected () {
@@ -39,6 +42,7 @@ public class Grenade : MonoBehaviour
 			    if (damageableComponent)
 			    {
 				    (damageableComponent as IDamageable).TakeDamage(10);
+                    Instantiate(explosion, transform.position, Quaternion.identity);
 				    Destroy(this.gameObject);
 			    }
 		    }

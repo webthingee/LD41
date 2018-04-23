@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 50804668588766890}
   - component: {fileID: 114320831542580782}
   - component: {fileID: 114452885810119466}
-  - component: {fileID: 114288171542004288}
+  - component: {fileID: 114744778393930506}
   m_Layer: 10
   m_Name: Float Ro
   m_TagString: Enemy
@@ -166,38 +166,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114288171542004288
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1173351845177434}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33e05f5d990b54b53b0efe18a979579f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 2
-  climbSpeed: 2
-  jumpSpeed: 2
-  doubleJumpSpeed: 2
-  gravity: 36
-  isClimbing: 0
-  climbAxis: 0
-  isJumping: 0
-  jumpAvailable: 0
-  canDoubleJump: 0
-  hasDoubleJumped: 0
-  stopGravity: 0
-  isGrounded: 0
-  isRight: 0
-  isLeft: 0
-  edgeDistance: 0
-  canMove: 0
-  walkable:
-    serializedVersion: 2
-    m_Bits: 256
-  verticalDirection: 1
 --- !u!114 &114320831542580782
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -267,6 +235,18 @@ MonoBehaviour:
   deathEffect: {fileID: 0}
   deathSound: {fileID: 11400000, guid: 6bf0b63ee52d2dd44aae2faebe6c982a, type: 2}
   damage: 0
+--- !u!114 &114744778393930506
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1173351845177434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f1add91c949a4cc1ad01563af823e83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  travel: {fileID: 0}
 --- !u!212 &212483579739601364
 SpriteRenderer:
   m_ObjectHideFlags: 1
