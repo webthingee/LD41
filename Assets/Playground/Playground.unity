@@ -223,10 +223,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1173351845177434, guid: 1fab4665751604da18233105dc183d74, type: 2}
-      propertyPath: m_Name
-      value: Float Ro
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1fab4665751604da18233105dc183d74, type: 2}
   m_IsPrefabParent: 0
@@ -512,6 +508,12 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114776447954840070, guid: 40f6651b027f142719b23fc999c93de5,
+        type: 2}
+      propertyPath: damageSound
+      value: 
+      objectReference: {fileID: 11400000, guid: c6dc1c1e9cd4f4ff98c680be662851f4,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 40f6651b027f142719b23fc999c93de5, type: 2}
   m_IsPrefabParent: 0
@@ -917,16 +919,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 14
       objectReference: {fileID: 0}
-    - target: {fileID: 114945505698698040, guid: fc21e36a3235c4b6587ec98e67ae31f2,
-        type: 2}
-      propertyPath: charMaxHealth
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 114443881981336806, guid: fc21e36a3235c4b6587ec98e67ae31f2,
-        type: 2}
-      propertyPath: enemySight
-      value: 5
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fc21e36a3235c4b6587ec98e67ae31f2, type: 2}
   m_IsPrefabParent: 0
@@ -1206,22 +1198,6 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4876844707023792, guid: 43851acb11c66440d876e81ed8a8cbdd, type: 2}
       propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114381033151384052, guid: 43851acb11c66440d876e81ed8a8cbdd,
-        type: 2}
-      propertyPath: charMaxHealth
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 114381033151384052, guid: 43851acb11c66440d876e81ed8a8cbdd,
-        type: 2}
-      propertyPath: deathEffect
-      value: 
-      objectReference: {fileID: 1975489357083222, guid: fb745b956680f493ca20b4077773b58d,
-        type: 2}
-    - target: {fileID: 61632496324309070, guid: 43851acb11c66440d876e81ed8a8cbdd,
-        type: 2}
-      propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -3393,7 +3369,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1342395069}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: PrizeBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4745,11 +4721,6 @@ Prefab:
     - target: {fileID: 1228890349986606, guid: 40f6651b027f142719b23fc999c93de5, type: 2}
       propertyPath: m_Name
       value: Rollo
-      objectReference: {fileID: 0}
-    - target: {fileID: 114776447954840070, guid: 40f6651b027f142719b23fc999c93de5,
-        type: 2}
-      propertyPath: charMaxHealth
-      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 40f6651b027f142719b23fc999c93de5, type: 2}
